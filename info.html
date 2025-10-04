@@ -4,36 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LifePharmacy - Про нас</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Головна</a></li>
-            <li><a href="about.html">Про компанію</a></li>
-            <li><a href="news.html">Новини</a></li>
-        </ul>
-    </nav>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="info.html">Про компанію</a></li>
+                <li><a href="news.html">Новини</a></li>
+            </ul>
+        </nav>
 
-    <h1>LifePharmacy</h1>
-    <pre lang="uk" class="header-text">Ваше здоров’я – наш пріоритет</pre>
+        <section>
+            <h1>LifePharmacy</h1>
+            <div class="content-block">
+                <pre lang="uk">Ваше здоров’я – наш пріоритет</pre>
+                <blockquote title="Інформація про компанію" id="about-section">
+                    <abbr title="Фармацевтична компанія" id="company-abbr">LifePharmacy</abbr> – це <var dir="ltr" style="color: blue;">компанія</var>, заснована в <code title="Рік заснування" id="year">2010</code>. Ми створюємо ліки для <var dir="ltr" style="font-style: italic;">покращення якості життя</var>.
+                </blockquote>
 
-    <blockquote title="Інформація про компанію" id="about-section" class="intro">
-        <abbr title="Фармацевтична компанія" id="company-abbr">LifePharmacy</abbr> – це <var dir="ltr" style="color: blue;">компанія</var>, заснована в <code title="Рік заснування" id="year">2010</code>. Ми створюємо ліки для <var dir="ltr" style="font-style: italic;">покращення якості життя</var>.
-    </blockquote>
+                <pre lang="uk">Наші цінності:</pre>
+                <blockquote title="Цінності компанії" id="values-section">
+                    <code title="Основні принципи" id="principles">Якість, інновації, доступність</code> та <abbr lang="uk">етика</abbr> – основа нашої роботи.
+                </blockquote>
 
-    <pre lang="uk" class="values-text">Наші цінності:</pre>
-    <blockquote title="Цінності компанії" id="values-section" class="values">
-        <code title="Основні принципи" id="principles">Якість, інновації, доступність</code> та <abbr lang="uk" class="ethics">етика</abbr> – основа нашої роботи.
-    </blockquote>
+                <address dir="ltr" style="font-size: 14px;">
+                    <var dir="ltr" style="color: green;">Контакти:</var> вул. Здоров’я, 1, Київ, Україна
+                </address>
 
-    <address dir="ltr" style="font-size: 14px;">
-        <var dir="ltr" style="color: green;">Контакти:</var> вул. Здоров’я, 1, Київ, Україна
-    </address>
+                <img ismap style="width: 100px; height: auto;" title="Логотип LifePharmacy" lang="uk" src="lifepharmacy_logo.png" alt="Логотип LifePharmacy">
 
-    <img ismap class="company-logo" style="width: 100px; height: auto;" title="Логотип LifePharmacy" lang="uk" src="https://via.placeholder.com/100?text=Logo" alt="Логотип LifePharmacy">
-
-    <blockquote title="Досягнення" id="achievements-section" class="achievements">
-        Ми розробили <code title="Кількість препаратів" id="drug-count">понад 50 препаратів</code> для різних хвороб. Співпраця з <abbr title="Наукові центри" id="research-abbr">науковцями</abbr> по всьому світу.
-    </blockquote>
+                <blockquote title="Досягнення" id="achievements-section">
+                    Ми розробили <code title="Кількість препаратів" id="drug-count">понад 50 препаратів</code> для різних хвороб. Співпраця з <abbr title="Наукові центри" id="research-abbr">науковцями</abbr> по всьому світу.
+                </blockquote>
+            </div>
+        </section>
+    </div>
 </body>
 </html>

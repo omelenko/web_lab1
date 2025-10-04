@@ -1,0 +1,139 @@
+/* Tag selectors */
+body {
+    margin-bottom: 20px;
+    margin-right: 10%;
+    margin-left: 15px;
+    padding-top: 10px;
+    padding-left: 15px;
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    position: relative;
+    z-index: auto;
+}
+
+/* Class selectors */
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    border-style: solid;
+    border-color: #2c3e50;
+    border-bottom-width: thin;
+    display: table;
+}
+
+/* Contextual (descendant) selectors */
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+/* Adjacent sibling selectors */
+h1 + pre {
+    margin-top: 10px;
+    border-bottom-style: dashed;
+    border-bottom-color: #2196f3;
+}
+
+/* Attribute selectors */
+[title] {
+    border-left-style: outset;
+    border-left-color: #4caf50;
+}
+
+[lang="uk"] {
+    color: #333;
+    direction: ltr;
+    unicode-bidi: embed;
+}
+
+[src$=".png"] {
+    border-right-width: thick;
+    border-right-color: #ff5722;
+}
+
+/* Pseudo-classes */
+nav ul li:first-child {
+    font-weight: bold;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+p::lang(uk) {
+    font-style: italic;
+}
+
+article:first-of-type {
+    background-color: #e3f2fd;
+}
+
+input:invalid {
+    border-color: red;
+}
+
+a:link {
+    color: #2196f3;
+    text-decoration: none;
+}
+
+input:in-range {
+    border-color: green;
+}
+
+/* Pseudo-elements */
+p::first-line {
+    color: #d81b60;
+    font-weight: bold;
+}
+
+::selection {
+    background-color: #ffeb3b;
+    color: #000;
+}
+
+/* Border properties */
+blockquote {
+    border-bottom-style: solid;
+    border-bottom-width: thick;
+    border-bottom-color: #2c3e50;
+    padding-left: 20px;
+}
+
+/* Positioning and visualization */
+article {
+    display: table-row-group;
+    min-height: 100px;
+    max-height: 300px;
+    overflow: scroll;
+    vertical-align: text-top;
+}
+
+img {
+    float: left;
+    clear: none;
+    margin-right: 10px;
+}
+
+aside {
+    display: block;
+    position: static;
+    visibility: visible;
+    outline: 2px solid #2196f3;
+    outline-color: #2196f3;
+}
+
+/* Background properties */
+header {
+    background-image: url('https://via.placeholder.com/1200x200?text=Header+Background');
+    background-position: top center;
+    background-attachment: scroll;
+}
+
+/* Important rule */
+h1 {
+    color: blue !important;
+}
