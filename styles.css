@@ -126,14 +126,36 @@ aside {
     outline-color: #2196f3;
 }
 
-/* Background properties */
 header {
     background-image: url('https://via.placeholder.com/1200x200?text=Header+Background');
     background-position: top center;
     background-attachment: scroll;
 }
 
-/* Important rule */
 h1 {
     color: blue !important;
+}
+
+table {
+  border-collapse: collapse;
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+th, td {
+  border: 1px solid #999;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+
+td:hover {
+  background-color: #ececec;
 }
