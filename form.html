@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LifePharmacy - Форма введення</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html" rel="start" title="Головна" shape="rect">Головна</a></li>
+        <li><a href="info.html" rel="about" title="Інформація" shape="rect">Про компанію</a></li>
+        <li><a href="news.html" rel="next" title="Новини" shape="rect">Новини</a></li>
+        <li><a href="lists.html" rel="contents" title="Списки" shape="rect">Списки</a></li>
+        <li><a href="menu.html" rel="menu" title="Меню" shape="rect">Меню</a></li>
+      </ul>
+    </nav>
+
+    <section>
+      <h1>Форма введення інформації про товари</h1>
+
+      <!-- ФОРМА -->
+      <form 
+        accept="text/html"
+        name="productForm"
+        action="#"
+        method="post"
+        id="productForm"
+        novalidate>
+
+        <fieldset lang="uk" style="border: 2px solid #2196f3; padding: 15px;" title="Інформація про товар">
+          <legend title="Введіть дані про товар" lang="uk" style="color: blue;">Дані про товар</legend>
+
+          <!-- Назва -->
+          <label id="lblName" class="inputLabel" for="prodName">Назва товару:</label><br>
+          <input 
+            id="prodName" 
+            name="prodName" 
+            type="text"
+            maxlength="40"
+            autocomplete="on"
+            width="250"
+            dirname="prodName.dir"
+            placeholder="Введіть назву препарату"
+            required>
+          <br><br>
+
+          <!-- Ціна -->
+          <label id="lblPrice" class="inputLabel" for="price">Ціна (грн):</label><br>
+          <input 
+            id="price"
+            name="price"
+            type="number"
+            max="9999"
+            width="100"
+            height="25"
+            autocomplete="on"
+            formenctype="multipart/form-data"
+            formnovalidate
+            placeholder="Введіть ціну"
+            required>
+          <br><br>
+
+          <!-- Дата виробництва -->
+          <label id="lblDate" class="inputLabel" for="mfgDate">Дата виробництва:</label><br>
+          <input id="mfgDate" name="mfgDate" type="datetime-local">
+          <br><br>
+
+          <!-- Колір упаковки -->
+          <label id="lblColor" class="inputLabel" for="packColor">Колір упаковки:</label><br>
+          <input id="packColor" name="packColor" type="color" value="#00bcd4">
+          <br><br>
+
+          <!-- Місяць поставки -->
+          <label id="lblMonth" class="inputLabel" for="deliveryMonth">Місяць поставки:</label><br>
+          <input id="deliveryMonth" name="deliveryMonth" type="month">
+          <br><br>
+
+          <!-- Посилання -->
+          <label id="lblUrl" class="inputLabel" for="productUrl">URL сторінки товару:</label><br>
+          <input id="productUrl" name="productUrl" type="url" placeholder="https://example.com/product">
+          <br><br>
+
+          <!-- Тип препарату -->
+          <label id="lblType" class="inputLabel" for="type">Тип препарату:</label><br>
+          <select id="type" name="type">
+            <option dir="ltr" label="Без рецепта" selected>Без рецепта</option>
+            <option dir="ltr" label="За рецептом">За рецептом</option>
+            <option dir="ltr" label="БАД" disabled>БАД</option>
+          </select>
+          <br><br>
+
+          <!-- Опис -->
+          <label id="lblDesc" class="inputLabel" for="desc">Опис препарату:</label><br>
+          <textarea 
+            id="desc" 
+            name="desc"
+            class="textArea"
+            dirname="desc.dir"
+            placeholder="Короткий опис препарату..."
+            minlength="10"
+            required
+            readonly>Опис зразка...</textarea>
+          <br><br>
+
+          <!-- Радіо: наявність -->
+          <label id="lblAvail" class="inputLabel">Наявність:</label><br>
+          <input type="radio" name="available" value="yes" checked> Є в наявності
+          <input type="radio" name="available" value="no"> Немає
+          <br><br>
+
+          <!-- Ключ безпеки -->
+          <keygen 
+            disabled 
+            name="securityKey"
+            title="Захист даних"
+            challenge="keyChallenge"
+            autofocus>
+          <br><br>
+
+          <!-- Прогрес -->
+          <label>Завантаження даних:</label><br>
+          <progress value="70" dir="ltr" max="100"></progress>
+          <br><br>
+
+          <!-- Вивід -->
+          <output class="outValue" form="productForm" lang="uk" name="outputResult">0</output>
+          <br><br>
+
+          <!-- Кнопки -->
+          <button 
+            name="saveBtn" 
+            formenctype="multipart/form-data" 
+            autofocus 
+            form="productForm">
+            Зберегти дані
+          </button>
+
+          <input 
+            type="submit"
+            value="Відправити інформацію"
+            width="120"
+            height="25"
+            autocomplete="on"
+            checked>
+          <br><br>
+
+        </fieldset>
+
+        <!-- Деталі -->
+        <details lang="uk" class="formDetails" open>
+          <summary>Інструкція</summary>
+          <p>Заповніть усі необхідні поля перед відправленням.</p>
+        </details>
+
+      </form>
+    </section>
+  </div>
+</body>
+</html>
