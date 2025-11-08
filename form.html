@@ -21,7 +21,6 @@
     <section>
       <h1>Форма введення інформації про товари</h1>
 
-      <!-- ФОРМА -->
       <form 
         accept="text/html"
         name="productForm"
@@ -33,7 +32,6 @@
         <fieldset lang="uk" style="border: 2px solid #2196f3; padding: 15px;" title="Інформація про товар">
           <legend title="Введіть дані про товар" lang="uk" style="color: blue;">Дані про товар</legend>
 
-          <!-- Назва -->
           <label id="lblName" class="inputLabel" for="prodName">Назва товару:</label><br>
           <input 
             id="prodName" 
@@ -47,7 +45,6 @@
             required>
           <br><br>
 
-          <!-- Ціна -->
           <label id="lblPrice" class="inputLabel" for="price">Ціна (грн):</label><br>
           <input 
             id="price"
@@ -63,17 +60,14 @@
             required>
           <br><br>
 
-          <!-- Дата виробництва -->
           <label id="lblDate" class="inputLabel" for="mfgDate">Дата виробництва:</label><br>
           <input id="mfgDate" name="mfgDate" type="datetime-local">
           <br><br>
 
-          <!-- Колір упаковки -->
           <label id="lblColor" class="inputLabel" for="packColor">Колір упаковки:</label><br>
           <input id="packColor" name="packColor" type="color" value="#00bcd4">
           <br><br>
 
-          <!-- Місяць поставки -->
           <label id="lblMonth" class="inputLabel" for="deliveryMonth">Місяць поставки:</label><br>
           <input id="deliveryMonth" name="deliveryMonth" type="month">
           <br><br>
@@ -83,7 +77,6 @@
           <input id="productUrl" name="productUrl" type="url" placeholder="https://example.com/product">
           <br><br>
 
-          <!-- Тип препарату -->
           <label id="lblType" class="inputLabel" for="type">Тип препарату:</label><br>
           <select id="type" name="type">
             <option dir="ltr" label="Без рецепта" selected>Без рецепта</option>
@@ -92,7 +85,6 @@
           </select>
           <br><br>
 
-          <!-- Опис -->
           <label id="lblDesc" class="inputLabel" for="desc">Опис препарату:</label><br>
           <textarea 
             id="desc" 
@@ -105,13 +97,11 @@
             readonly>Опис зразка...</textarea>
           <br><br>
 
-          <!-- Радіо: наявність -->
           <label id="lblAvail" class="inputLabel">Наявність:</label><br>
           <input type="radio" name="available" value="yes" checked> Є в наявності
           <input type="radio" name="available" value="no"> Немає
           <br><br>
 
-          <!-- Ключ безпеки -->
           <keygen 
             disabled 
             name="securityKey"
@@ -120,16 +110,13 @@
             autofocus>
           <br><br>
 
-          <!-- Прогрес -->
           <label>Завантаження даних:</label><br>
           <progress value="70" dir="ltr" max="100"></progress>
           <br><br>
 
-          <!-- Вивід -->
           <output class="outValue" form="productForm" lang="uk" name="outputResult">0</output>
           <br><br>
 
-          <!-- Кнопки -->
           <button 
             name="saveBtn" 
             formenctype="multipart/form-data" 
@@ -149,7 +136,6 @@
 
         </fieldset>
 
-        <!-- Деталі -->
         <details lang="uk" class="formDetails" open>
           <summary>Інструкція</summary>
           <p>Заповніть усі необхідні поля перед відправленням.</p>
