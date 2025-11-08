@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LifePharmacy - Завдання JavaScript</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/events.js"></script>
+</head>
+<body>
+  <div class="container">
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="info.html">Про компанію</a></li>
+        <li><a href="news.html">Новини</a></li>
+        <li><a href="lists.html">Списки</a></li>
+        <li><a href="form.html">Форма</a></li>
+        <li><a href="tasks.html">Завдання JS</a></li>
+        <li><a href="canvas_animation.html">Canvas Анімація</a></li>
+      </ul>
+    </nav>
+
+    <section>
+      <h1>Лабораторна робота 7</h1>
+
+      <div class="task-section">
+        <h2>Завдання 1 і 2: Обробники подій</h2>
+        <p><b>Інструкції:</b> </p>
+        <p>Зроблено обробники входження, виходу, кліку та подвійного кліку на h2, h3</p>
+        <p>При кліку текст обгортається жовтим кольором а при подвійному кліку текст з чорного стає червоним</p>
+        <p>Також при перетягуванні текст змінить позицію (натисніть нього щоб поставити на місце</p>
+        
+        <div class="demo-elements">
+          <h2>Заголовок H2 - клікніть на мене!</h2>
+          <h3>Заголовок H3 - подвійний клік змінює колір</h3>
+          <h4>Заголовок H4 - можна перетягнути</h4>
+          <p><b>Жирний текст</b> та <i>курсивний текст</i> також мають обробники подій</p>
+          <p><strong>Важливий текст</strong> і <em>виділений текст</em></p>
+        </div>
+      </div>
+
+      <div class="task-section">
+        <h2>Завдання 3: Перелік елементів форми (Варіант 3.10)</h2>
+        <p><b>Інструкції:</b></p>
+        <p>Кнопка "Run Task" виводить у консоль інформацію про всі елементи з form.html</p>
+        
+        <form id="productForm" name="productForm" method="post" action="#">
+          <label>Назва товару:</label>
+          <input type="text" id="prodName" name="prodName" placeholder="Введіть назву">
+          
+          <label>Ціна:</label>
+          <input type="number" id="price" name="price" placeholder="Ціна">
+          
+          <label>Тип:</label>
+          <select id="type" name="type">
+            <option value="otc">Без рецепта</option>
+            <option value="rx">За рецептом</option>
+          </select>
+          
+          <label>Наявність:</label>
+          <input type="radio" name="available" value="yes" checked> Є в наявності
+          <input type="radio" name="available" value="no"> Немає
+          
+          <br><br>
+          <button type="button" onclick="runTask()">Run Task</button>
+        </form>
+        
+        <textarea id="taskOutput" placeholder="Тут з'явиться перелік елементів форми..."></textarea>
+      </div>
+
+      <div class="task-section">
+        <h2>Завдання 4: Обробники подій для зображень</h2>
+        <p><b>Інструкції:</b></p>
+        <p>Зображення змінюють розмір при наведенні, виводять повідомлення при кліку</p>
+        
+        <div style="text-align: center;">
+          <img src="globalmed.png" 
+               alt="Аптека 2" class="demo-img">
+          <img src="lifepharmacy_logo.jpg" 
+               alt="Ліки" class="demo-img">
+        </div>
+        <br><br><br><br><br>
+        <br><br><br><br><br>
+      </div>
+
+      <div class="task-section">
+        <h2>Завдання 5: Пошук з регулярними виразами (Варіанти 5.1-5.4)</h2>
+        <p><b>Інструкції:</b> Введіть текст українською мовою і натисніть "Пошук"</p>
+        
+        <label>Введіть текст для аналізу:</label>
+        <input type="text" id="searchInput" 
+               placeholder="Введіть текст українською мовою з цифрами..." 
+               value="У 2024 році аптека продала 150 препаратів. Гарні ліки допомагають людям.">
+        
+        <button type="button" onclick="searchText()">Пошук інформації</button>
+        
+        <textarea id="searchOutput" placeholder="Результати пошуку з'являться тут..."></textarea>
+        
+        <p><b>Шукається:</b></p>
+        <ul>
+          <li>5.1. Кількість слів</li>
+          <li>5.2.4. Слова що починаються з "г" і закінчуються на "і"</li>
+          <li>5.3. Всі цифри</li>
+          <li>5.4. Цілі числа</li>
+        </ul>
+      </div>
+
+      <!-- TASK 6: Array Task -->
+      <div class="task-section">
+        <h2>Завдання 6: Робота з масивами (Варіант 6.10)</h2>
+        <p><b>Завдання:</b></p><p>Задано одновимірні масиви А і В відповідних розмірностей N і М. 
+           Побудувати масив С розміру N+М, розмістивши:</p> 
+           <p>додатні елементи масиву А, 
+           додатні елементи масиву В, від'ємні елементи масиву А та від'ємні елементи масиву В.</p>
+        
+        <button type="button" onclick="arrayTask()">Array Task</button>
+        
+        <textarea id="arrayOutput" placeholder="Результати роботи з масивами з'являться тут..."></textarea>
+      </div>
+
+    </section>
+
+    <footer style="margin-top: 50px; padding: 20px; text-align: center; background-color: #f5f5f5; border-top: 2px solid #2196f3;">
+      <p><b>LifePharmacy</b> - Лабораторна робота 7</p>
+    </footer>
+  </div>
+</body>
+</html>
+
